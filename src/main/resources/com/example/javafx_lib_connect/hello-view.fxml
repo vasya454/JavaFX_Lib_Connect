@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<Pane xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.javafx_lib_connect.HelloController">
+   <children>
+      <AnchorPane prefHeight="311.0" prefWidth="389.0">
+         <children>
+         
+                <Label fx:id="welcomeText" layoutX="135.0" layoutY="6.0" prefHeight="17.0" prefWidth="120.0" />
+            <TextField layoutX="40.0" layoutY="39.0" prefHeight="25.0" prefWidth="310.0" promptText="Введите номер читательского билета" />
+             <Button layoutX="126.0" layoutY="74.0" onAction="#onHelloButtonClick" text="Получить список книг" />
+            <TextArea layoutX="21.0" layoutY="115.0" prefHeight="106.0" prefWidth="350.0" />
+            <TextField layoutX="45.0" layoutY="238.0" prefHeight="25.0" prefWidth="302.0" promptText="Введите ID экземпляра" />
+            <Button layoutX="149.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="92.0" text="Вернуть" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
