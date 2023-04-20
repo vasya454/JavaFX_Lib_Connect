@@ -14,7 +14,7 @@
          <children>
          
                 <Label fx:id="welcomeText" layoutX="135.0" layoutY="6.0" prefHeight="17.0" prefWidth="120.0" />
-            <TextField fx:id="textField1" layoutX="40.0" layoutY="39.0" prefHeight="25.0" prefWidth="310.0" promptText="Введите номер читательского билета" />
+            <TextField fx:id="text1" layoutX="40.0" layoutY="39.0" prefHeight="25.0" prefWidth="310.0" promptText="Введите номер читательского билета" />
              <Button layoutX="126.0" layoutY="74.0" onAction="#onButton1Click" text="Получить список книг" />
             <TextArea layoutX="21.0" layoutY="115.0" prefHeight="106.0" prefWidth="350.0" />
             <TextField layoutX="45.0" layoutY="238.0" prefHeight="25.0" prefWidth="302.0" promptText="Введите ID экземпляра" />

@@ -7,11 +7,12 @@ import javafx.scene.control.TextField;
 public class HelloController {
     @FXML
     private Label welcomeText;
+    @FXML
+    TextField text1;
+
 
     @FXML
-    public String text = new TextField().getText();
-    @FXML
     protected void onButton1Click() {
-        SQLConnection.getBookList(text);
+        SQLConnection.getBookList(text1.getText());
     }
 }
