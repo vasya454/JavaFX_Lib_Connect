@@ -18,23 +18,27 @@ public class SQLConnection {
         }
         return connection;
     }
-    public static ArrayList<String> getBookList()
+    public static ArrayList<String> getBookList(String N_chit)
     {
         ArrayList<String> res= new ArrayList<>();
         SQLConnection app = new SQLConnection();
         Connection con =app.connect();
-        String s = "select fio from author";
+        String s = "select \"FIO\", id_ex, title from vydacha v join \"Reader\" r on v.n_chit = r.\"N_chit\" left join \"Exemplar\" e on e.id = v.id_ex left join book b on b.isbn = e.isbn where n_chit =" + N_chit;
         try {
             Statement statement = con.createStatement();
             ResultSet rs = statement.executeQuery(s);
             while (rs.next())
             {
-                String t = rs.getString("fio");
+                String t = rs.getString("\"FIO\"");
                 res.add(t);
+                String t2 = rs.getString("id_ex");
+                res.add(t2);
+                String t3 = rs.getString("title");
+                res.add(t3);
             }
             //con.close();
         } catch (SQLException e) {
-            System.out.println("упс");
+            System.out.println("Ошибка SQL!");
         }
         return res;
     }
